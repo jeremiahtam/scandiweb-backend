@@ -48,8 +48,8 @@ class ProductController extends Controller
   }
   public function deleteProducts()
   {
-	header('Content-Type: application/json; charset=utf-8');
-	$ids = ($_POST['ids']);
+    header('Content-Type: application/json; charset=utf-8');
+    $ids = ($_POST['ids']);
 
     $delete = $this->productsModel->deleteProducts($ids);
     if ($delete) {
@@ -66,4 +66,17 @@ class ProductController extends Controller
       return;
     }
   }
+}
+
+class DVDController extends ProductController
+{
+  private $size;
+}
+
+class FurnitureController extends ProductController
+{
+}
+
+class BookController extends ProductController
+{
 }

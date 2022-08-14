@@ -1,5 +1,5 @@
 <?php
-  class Controller {
+  abstract class Controller {
     // Load model
     public function model($model){
       // Require model file
